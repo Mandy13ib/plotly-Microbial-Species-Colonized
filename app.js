@@ -9,7 +9,7 @@ function buildMetadata(selection) {
       
       var sample = filtData.filter(item => item.id.toString() == selection)[0];
 
-      // Specify the location of the metadata and update it
+      //pinpoint the location of the metadata and update it
       var metadata = d3.select('#sample-metadata');
       metadata.html('');
       
@@ -59,7 +59,7 @@ function buildCharts(selection) {
 
       Plotly.newPlot("bar", barData, barLayout);
 
-      // Create bubble chart in correct location
+      // Create bubble chart in the location you need
       var bubbleTrace = {
           x: idValues,
           y: sampleValues,
