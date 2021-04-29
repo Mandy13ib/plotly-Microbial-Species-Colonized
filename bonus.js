@@ -129,3 +129,32 @@ function buildMetadata(selection) {
     // Read json data
     d3.json("samples.json").then((sampleData) => {
   
+        // Filter data to get sample names
+        var filtData = sampleData.names;
+  
+        // Add dropdown option for each sample
+        var dropdownMenu = d3.select("#selDataset");
+  
+        // Add names to the drop down
+        filtData.forEach((id) => {
+            dropdownMenu.append("option").property("value", id).text(id);
+        })
+  
+        // Use first sample to build metadata and initial plots
+        buildMetadata(filtData[0]);
+  
+        buildCharts(filtData[0]);
+  
+    });
+  }
+  
+  function optionChanged(newSelection) {
+  
+    // Update metadata with newly selected sample
+    buildMetadata(newSelection); 
+    // Update charts with newly selected sample
+    buildCharts(newSelection);
+  }
+  
+  // Initialize dashboard on page load
+  init();
