@@ -86,7 +86,6 @@ function buildCharts(selection) {
   });
 }
 
-
 // Define function that will run on page load
 function init() {
 
