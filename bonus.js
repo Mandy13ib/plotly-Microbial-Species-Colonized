@@ -86,10 +86,8 @@ function buildMetadata(selection) {
         Plotly.newPlot("bubble", bubbleData, layout);
   
       // Build the gauge indicator
-  
-        // Var IDs = sampleData.names;
         var wash_freq = sampleDict.wfreq;
-  
+
         var data = [
         {
           domain: { x: [0, 1], y: [0, 1] },
