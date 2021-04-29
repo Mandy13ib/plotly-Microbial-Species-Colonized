@@ -20,7 +20,7 @@ function buildMetadata(selection) {
     });
   }
   
-  // Define a function that will create charts for given sample
+  // Define a function that will create charts for given samples
   function buildCharts(selection) {
   
     // Read the json data
